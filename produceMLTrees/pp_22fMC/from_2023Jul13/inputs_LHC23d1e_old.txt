@@ -1,0 +1,10 @@
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520473/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192286/0001/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520472/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192285/0001/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520472/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192285/0002/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520471/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192284/0001/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520471/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192284/0002/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520471/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192284/0003/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520294/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192283/0001/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520294/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192283/0002/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520259/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192282/0001/AO2D.root
+/data/dataalice/faggin/Hyperloop/Run3_MC/LHC23d1e/2023Jul13_HLtrain100718/520259/alice/cern.ch/user/a/alihyperloop/jobs/0019/hy_192282/0002/AO2D.root

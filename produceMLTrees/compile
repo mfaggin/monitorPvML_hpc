@@ -1,0 +1,1 @@
+gcc -Wall -I$ROOTSYS/include -I$ALICE_ROOT/include main.cpp filterTree.cpp -o filter_trees.out `root-config --cflags --glibs --ldflags` -lstdc++

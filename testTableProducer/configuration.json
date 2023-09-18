@@ -1,0 +1,96 @@
+{
+    "qa-event-track-lite-producer": {
+        "maxEta": "2",
+        "targetNumberOfEvents": "100000",
+        "maxPhi": "10",
+        "minPhi": "-1",
+        "selectGoodEvents": "1",
+        "maxPt": "1e+10",
+        "minPt": "-10",
+        "selectPrim": "0",
+        "selectSec": "0",
+        "fractionOfSampledEvents": "1.1",
+        "trackSelection": "1",
+        "processTableMC": "0",
+        "selectCharge": "0",
+        "selectPID": "0",
+        "selectMaxVtxZ": "100",
+        "processTableData": "0",
+        "isRun3": "1",
+        "minEta": "-2",
+        "processTableDataCollsBig": "0",
+        "processTableMCCollsBig": "1",
+        "storeOnlySinglePvCollsBig": "false",
+        "storeOnlyMultiplePvCollsBig": "false"
+    },
+    "tof-signal": {
+        "processRun3": "1",
+        "processRun2": "0"
+    },
+    "tof-event-time": {
+        "parametrizationPath": "TOF/Calib/Params",
+        "sel8TOFEvTime": "0",
+        "maxNtracksInSet": "10",
+        "fatalOnPassNotAvailable": "1",
+        "maxMomentum": "2",
+        "paramFileName": "",
+        "processOnlyFT0": "0",
+        "processRun2": "0",
+        "passName": "",
+        "processNoFT0": "0",
+        "minMomentum": "0.5",
+        "ccdb-timestamp": "-1",
+        "maxEvTimeTOF": "100000",
+        "processFT0": "1",
+        "ccdb-url": "http://alice-ccdb.cern.ch",
+        "loadResponseFromCCDB": "0"
+    },
+    "track-propagation": {
+        "lutPath": "GLO/Param/MatLUT",
+        "mVtxPath": "GLO/Calib/MeanVertex",
+        "geoPath": "GLO/Config/GeometryAligned",
+        "grpmagPath": "GLO/Config/GRPMagField",
+        "ccdb-url": "http://alice-ccdb.cern.ch",
+        "minPropagationDistance": "5",
+        "processStandard": "0",
+        "processCovariance": "1"
+    },
+    "timestamp-task": {
+        "rct-path": "RCT/Info/RunInformation",
+        "orbit-reset-path": "CTP/Calib/OrbitReset",
+        "ccdb-url": "http://alice-ccdb.cern.ch",
+        "verbose": "0",
+        "isRun2MC": "0"
+    },
+    "ft0-corrected-table": {},
+    "bc-selection-task": {
+        "triggerBcShift": "999",
+        "processRun3": "1",
+        "processRun2": "0"
+    },
+    "event-selection-task": {
+        "syst": "pp",
+        "isMC": "0",
+        "processRun3": "1",
+        "processRun2": "0",
+        "muonSelection": "0",
+        "customDeltaBC": "300"
+    },
+    "track-selection": {
+        "ptMax": "1e+10",
+        "produceTable": "1",
+        "etaMin": "-0.8",
+        "isRun3": "1",
+        "itsMatching": "0",
+        "etaMax": "0.8",
+        "compatibilityIU": "0",
+        "dcaSetup": "0",
+        "ptMin": "0.05",
+        "produceFBextendedTable": "-1"
+    },
+    "multiplicity-table": {
+        "processRun2": "0",
+        "processRun3": "1",
+        "doVertexZeq": "0"
+    }
+}

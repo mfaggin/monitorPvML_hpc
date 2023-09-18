@@ -1,0 +1,1 @@
+gcc -Wall -I$ROOTSYS/include main.cpp PostProcessBDT.cpp -o postprocess.out `root-config --cflags --glibs --ldflags` -lstdc++
