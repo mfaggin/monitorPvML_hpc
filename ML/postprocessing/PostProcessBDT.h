@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <map>
 
 #include "TTree.h"
 #include "TFile.h"
@@ -15,6 +16,18 @@
 #include "TStyle.h"
 
 namespace ML {
+    
+    enum eCases {
+        kBdtScore=0, kBdtScoreNormalized, kIsEvSel,
+        kPosX, kPosY, kPosZ,
+        kCovXX, kCovXY, kCovXZ, kCovYY, kCovYZ, kCovZZ,
+        kNumContrib, kNumTracksAll, kNumtracksFiltered, kPvChi2,
+        kFt0PosZ, kFt0Asignal, kFt0Csignal, kFt0Msignal, kV0Asignal,
+        kCollTimeRes, kNRecoPvPerMcColl, kIsPvHighestContribForMcColl, kIsDuplicate,
+        /* TODO: add all 2D cases */
+        kNCases
+    };
+
     class PostProcessBDT {
 
         public:
@@ -22,6 +35,7 @@ namespace ML {
             PostProcessBDT(std::string str_input, std::string str_case);
             ~PostProcessBDT();
 
+            
             /// setters
             void setIsMC(bool flag) {isMC = flag;}
             void setInputFile(std::string flag) {str_file_input = flag;}
@@ -31,6 +45,13 @@ namespace ML {
                 classes = input_classes;
                 cuts = input_classes_cuts;
             }
+            void setEnablePlotting() {
+                enablePlotting = true;
+                std::cout << ">>> plotting at screen enabled" << std::endl;
+            }
+            void unsetProcessCase(int flag) {map_process_case[flag] = false;}
+            void setProcessCase(int flag) {map_process_case[flag] = true;}
+            void setProcessAllCases() {for(int i=0; i<static_cast<int>(kNCases); i++)    map_process_case[i] = true;}
     
             /// getters
             bool        getIsMC() {return isMC;}
@@ -65,17 +86,19 @@ namespace ML {
             }
 
         private:
-        
-            bool isMC;                          // true: application on MC, i.e. labelled output; false: unlabelled output
-            std::string str_file_input;         // input file, i.e. output of the application process
-            std::string str_case_application;   // application case (eg: LHC22s_pass5)
+
+            bool isMC;                               // true: application on MC, i.e. labelled output; false: unlabelled output
+            std::string str_file_input;              // input file, i.e. output of the application process
+            std::string str_case_application;        // application case (eg: LHC22s_pass5)
             
-            float bdt_cut;                      // cut on BDT output score
+            float bdt_cut;                           // cut on BDT output score
             std::vector<std::string> classes = {};   // classes to be considered in the labelled case
             std::vector<std::string> cuts = {};      // cuts to determined the classes in the labelled case
     
-            TTree* inputTree = nullptr;         //! tree from application
-            std::vector<TCanvas*> vec_canvases = {};
+            TTree* inputTree = nullptr;              //! tree from application
+            std::vector<TCanvas*> vec_canvases = {}; //
+
+            std::map<int, bool> map_process_case; // map to enable/disable the postprocessing of variables/distributions
 
             /// miscellanea
             std::vector<int> colors = {kBlue+2, kRed+2};
@@ -96,6 +119,7 @@ namespace ML {
 
                 return strBDTcut;
             }
+            bool enablePlotting = false;        // enable plotting at screen of TCanvases
     };
 }
 
